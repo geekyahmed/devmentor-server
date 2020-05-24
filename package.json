@@ -1,0 +1,32 @@
+{
+  "name": "devmentor-server",
+  "version": "1.0.0",
+  "description": "the server of devmentor web application",
+  "main": "server.js",
+  "scripts": {
+    "prod": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "jwt",
+    "passport",
+    "express"
+  ],
+  "author": "Bankole Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^7.4.2",
+    "mongodb": "^3.1.6",
+     "passport-local": "^1.0.0",
+    "mongoose": "^5.2.15",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
