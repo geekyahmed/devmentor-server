@@ -47,8 +47,12 @@ module.exports = {
             })
     },
 
-    createBoard: (req, res) => {
-        
+    createSession: (req, res) => {
+        const today = Date.now()
+
+        const sessionData = {
+            
+        }
     }
 
 }

@@ -14,7 +14,7 @@ module.exports = {
 
   //Register New User
   registerMentor: (req, res) => {
-    const today = new Date()
+    const today = Date.now()
     const userData = {
       name: req.body.name,
       username: req.body.username,
