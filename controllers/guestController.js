@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const Mentor = require('../models/mentorModel').Mentor
+const Article = require('../models/articleModel').Article
 
 process.env.SECRET_KEY = 'secret'
 
@@ -10,6 +11,12 @@ module.exports = {
     const mentors = await Mentor.find()
 
     res.json(mentors)
+  },
+
+  getArticles: async(req, res)=> {
+    const articles = await Article.find()
+
+    res.json(articles)
   },
 
   //Register New User

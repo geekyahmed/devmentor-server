@@ -11,18 +11,17 @@ router.route('/', async (req, res) => { })
   .get(guestController.index)
 
 
-//Register New User
-// noinspection JSCheckFunctionSignatures
+//Login Route  For User
 router.route('/login')
   .post(guestController.postLogin);
 
 
-// noinspection JSCheckFunctionSignatures
 router.route('/register')
   .post(guestController.registerMentor);
 
 router.route('/:id')
   .get(guestController.getSingleMentor)
-//Login Route Four Users 
 
+  route.route('/articles', async(req, res)=> {})
+    .get(guestController.getArticles)
 module.exports = router

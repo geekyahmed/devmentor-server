@@ -1,6 +1,8 @@
 const Article = require('../models/articleModel')
 
 module.exports = {
+    
+
     createArticle: (req, res)=> {
         const today = Date.now()
         const articleData = {
