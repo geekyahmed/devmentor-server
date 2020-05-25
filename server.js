@@ -24,7 +24,7 @@ mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: 
     console.log('MongoDB Database Connection Failed')
   });
 
-
+//Set Up Routes
 app.use('/api', guestRoutes);
 app.use('/api/mentor', mentorRoutes)
 

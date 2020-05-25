@@ -33,6 +33,8 @@ module.exports = {
             });
 
     },
+
+    //Delete Profile Controller
     deleteProfile: (req, res) => {
         const id = req.params.id
 
@@ -43,6 +45,10 @@ module.exports = {
             .catch(err => {
                 res.json({ error: err })
             })
+    },
+
+    createBoard: (req, res) => {
+        
     }
 
 }
