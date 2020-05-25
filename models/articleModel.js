@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const postSchema = new Schema({
+const articleSchema = new Schema({
     title: {
         type: String,
         required: true
     },
     cover_image: {
         type: String,
-        require: true
     },
     summary: {
         type: String,
@@ -25,5 +24,5 @@ const postSchema = new Schema({
 })
 
 module.exports = {
-    Post: mongoose.model('posts', postSchema)
+    Article: mongoose.model('articles', articleSchema)
 }
