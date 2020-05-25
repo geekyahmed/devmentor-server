@@ -28,7 +28,8 @@ const mentorSchema = new Schema({
         type: String
     },
     tags: {
-        type: Array
+        type: Array,
+
     },
     date: {
         type: Date,
