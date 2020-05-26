@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const profileController = require('../controllers/profileController')
-const articleController = require('../controllers/articleController')
+const postController = require('../controllers/postController')
 const { isUserAuthenticated } = require('../middlewares/auth')
 
 //Edit Profile Route
@@ -12,7 +12,7 @@ router.route('/edit/:id', isUserAuthenticated)
 router.route('/delete/:id', isUserAuthenticated)
   .delete(profileController.deleteProfile)
   
-  router.route('/articles/create', isUserAuthenticated)
-  .post(articleController.createArticle)
+  router.route('/post/create', isUserAuthenticated)
+  .post(postController.createPost)
 
 module.exports = router

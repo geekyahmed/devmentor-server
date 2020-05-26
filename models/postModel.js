@@ -1,13 +1,10 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
-const articleSchema = new Schema({
+const postSchema = new Schema({
     title: {
         type: String,
         required: true
-    },
-    cover_image: {
-        type: String,
     },
     summary: {
         type: String,
@@ -17,12 +14,13 @@ const articleSchema = new Schema({
         type: String,
         required: true
     },
-    mentor : {
-        type: Schema.Types.ObjectId,
-        ref: 'mentor'
-    }
-})
 
+    date: {
+        type: Date,
+        default: Date.now()
+    },
+
+});
 module.exports = {
-    Article: mongoose.model('articles', articleSchema)
+    Post: mongoose.model('posts', postSchema)
 }
