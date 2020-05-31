@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const cors = require('cors');
 const guestController = require('../controllers/guestController')
-const postController = require('../controllers/postController')
 router.use(cors())
 
 process.env.SECRET_KEY = 'secret'
@@ -23,10 +22,5 @@ router.route('/register')
 router.route('/:id')
   .get(guestController.getSingleMentor);
 
-  router.route('/posts')
-    .get(postController.getPosts)
-
-    router.route('/posts/:id')
-      .get(postController.getSinglePost)
     
 module.exports = router
